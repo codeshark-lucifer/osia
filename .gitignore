@@ -96,8 +96,12 @@ Thumbs.db
 # ==============================
 # Libraries
 # ==============================
-# Keep prebuilt libraries tracked
-/lib/**
+# Ignore all .lib files by default
+*.lib
+# But include everything in lib/ folder
+!/lib/
+!/lib/**
+
 
 # ==============================
 # Keep sources
