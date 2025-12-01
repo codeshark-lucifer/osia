@@ -1,14 +1,15 @@
-# Git ignore for an OpenGL C++ project (Windows / MinGW / Visual Studio / CMake)
-# Adjust the sections below to keep third-party vendor sources (e.g. `lib/`, `include/`) if you intentionally commit them.
-
-# --- Build output ---
+# ==============================
+# Build output
+# ==============================
 /build/
 /bin/
 /out/
 /dist/
 cmake-build-*/
 
-# --- Compiled files ---
+# ==============================
+# Compiled files
+# ==============================
 *.exe
 *.out
 *.dll
@@ -21,7 +22,9 @@ cmake-build-*/
 *.lo
 *.slo
 
-# --- Debug / profiling ---
+# ==============================
+# Debug / profiling
+# ==============================
 *.pdb
 *.ilk
 *.idb
@@ -31,14 +34,18 @@ cmake-build-*/
 *.gcno
 *.gcda
 
-# --- CMake files ---
+# ==============================
+# CMake files
+# ==============================
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile.cmake
 Build/
 
-# --- IDE / editor ---
+# ==============================
+# IDE / editor
+# ==============================
 .vs/
 .vscode/
 .idea/
@@ -53,7 +60,9 @@ Build/
 # JetBrains CLion
 cmake-build-*/
 
-# --- Temp / backup ---
+# ==============================
+# Temp / backup
+# ==============================
 *.log
 *.tmp
 *.temp
@@ -63,29 +72,36 @@ cmake-build-*/
 *.bak
 *.orig
 
-# --- OS files ---
+# ==============================
+# OS files
+# ==============================
 .DS_Store
 Thumbs.db
 
-# --- Packaging / installers ---
+# ==============================
+# Packaging / installers
+# ==============================
 *.msi
 *.7z
 *.zip
 *.tar.gz
 
-# --- Other generated files ---
+# ==============================
+# Other generated files
+# ==============================
 *.d
 *.dep
 *.o.d
 
-# --- Optional: ignore prebuilt third-party libraries ---
-# If you vendor prebuilt libs in `lib/` you may want to ignore them. Uncomment if needed:
-# /lib/*.a
-# /lib/*.lib
-# /lib/*.dll
+# ==============================
+# Libraries
+# ==============================
+# Keep prebuilt libraries tracked
+/lib/**
 
-# --- Keep sources, headers and third-party sources by default ---
-# Do NOT ignore `src/`, `include/`, or third-party source directories unless you know
-# those are regenerated or intentionally omitted from the repo.
-
-# End of file
+# ==============================
+# Keep sources
+# ==============================
+# Do NOT ignore src/, include/, or third-party sources you want to commit
+/src/
+/include/
